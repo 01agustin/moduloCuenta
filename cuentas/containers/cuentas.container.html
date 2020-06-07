@@ -1,0 +1,11 @@
+
+<div>
+    <ul>
+        <li *ngFor="let tipo  of tiposCuenta" (click)="selecccionTipo(tipo)">
+            {{tipo}}
+        </li>
+    </ul>
+</div>
+<app-cuenta *ngFor="let cuenta of cuentas" [cuenta]="cuenta" [ngIf]="cuenta.tipo !=filtroTipo">
+
+</app-cuenta>
